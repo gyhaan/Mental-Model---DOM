@@ -3,6 +3,7 @@ console.clear();
 
 const obj = {};
 
+// select elements
 const paragraph = document.querySelector("#myParagraph");
 const wordCloud = document.querySelector("#myWordCloud");
 const wordCloudDiv = document.createDocumentFragment();
@@ -10,6 +11,7 @@ const largestFont = 64;
 
 paragraph.textContent.split(" ").forEach((el) => {
   let properWord = el.trim().toLowerCase();
+
   properWord = properWord
     .split("")
     .filter(
@@ -33,5 +35,4 @@ for (let i = 0; i < ObjArr.length; i++) {
   wordCloudDiv.append(p);
 }
 
-console.log(wordCloudDiv);
 wordCloud.append(wordCloudDiv);
